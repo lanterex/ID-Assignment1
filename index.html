@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <link rel="icon" href="Images/hlc logo.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <script src="script.js"></script>
     <title>ID Assignment</title>
     <style>
@@ -40,7 +42,22 @@
             width: 80%;
             opacity: 35%;
         }
-
+        .mail{
+            width: 100%;
+            height: 100%;
+            background-color: #d7ecff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .inputemail{
+            padding: 2%;
+            margin: 2%;
+            background-color: aliceblue;
+            border-radius: 10px;
+            display: flex;
+        }
         /* css for slider */
         .forslider{
             margin: 0;
@@ -49,7 +66,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background:lightblue;
+            background:#d7ecff;
         }
         .slider{
             width: 360px;
@@ -153,6 +170,7 @@
         <nav>
             <ul>
             <li><a href="index.html">Home</a></li>
+            <li><a href="#">Locations</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">Order Now</a></li>
             </ul>
@@ -197,6 +215,7 @@
         </div>
     </div>
     <!--Image Slider end-->
+    <!--About Us Start-->
     <p style="font-size: 53px; text-align: center;"><u>About Us</u></p>
     <div class="content">
         <img src="Images/heart.jpg" alt="heart-image" width="292px" height="200px">
@@ -224,5 +243,25 @@
             Consequuntur perferendis, eligendi voluptate dolor ad animi laboriosam officiis est, 
             voluptatibus et nihil qui voluptatem nobis eaque!
         </p>
+    </div>
+    <p></p>
+    <hr width="100px">
+    <p></p>
+    <!--About Us end-->
+    <div class="mail">
+        <h1>Join the HLC newsletter!</h1>
+        <p>Be the first to know about our discounts and promotions!</p>
+        <form class="inputemail">
+            <span class="material-icons md-light">&#xe158;</span> 
+            <label for="email" style="display: inline-block; font-weight: bold;">Email Address:</label>
+            <input type="email" placeholder="Enter your e-mail">
+            <input type="submit" value="Submit">
+        </form>
+        
+        
+    </div>
 
         
+<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.2072803811723!2d103.84584656015302!3d1.2758858998221472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da193617c3e2f3%3A0xeef59e337c586f75!2sHey%20Long%20Cha%20%40%20International%20Plaza!5e0!3m2!1sen!2ssg!4v1637846325309!5m2!1sen!2ssg" 
+        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe> -->
