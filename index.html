@@ -9,8 +9,7 @@
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <link rel="icon" href="Images/hlc logo.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
     <script src="script.js"></script>
     <title>ID Assignment</title>
     <style>
@@ -32,7 +31,7 @@
             margin: 10px;
             font-size: 16px;
             width: 50%;
-            box-shadow: 0 0 10px 5px rgba(0,0,0,.5);
+            box-shadow: 0 0 10px 5px rgba(0,0,0,.15);
         }
         hr {
             height: 2px;
@@ -42,21 +41,9 @@
             width: 80%;
             opacity: 35%;
         }
-        .mail{
-            width: 100%;
-            height: 100%;
-            background-color: #d7ecff;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        .inputemail{
-            padding: 2%;
-            margin: 2%;
-            background-color: aliceblue;
-            border-radius: 10px;
-            display: flex;
+        
+        .padding{
+            padding: 5px;
         }
 
         /* css for slider */
@@ -67,10 +54,17 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background:#d7ecff;
+            background: linear-gradient(
+                135deg,
+                #bde0ff,
+                #d7ecff,
+                aliceblue,
+                #d7ecff,
+                #bde0ff               
+            );   
         }
         .slider{
-            width: 360px;
+            width: 640px;
             height: 360px;
             border-radius: 10px;
             overflow: hidden;
@@ -88,7 +82,7 @@
             transition: 1.6s;
         }
         .slide img{
-            width: 360px;
+            width: 640px;
             height: 360px;
         }
 
@@ -96,7 +90,7 @@
         
         .navigation-manual{
             position: absolute;
-            width: 360px;
+            width: 640px;
             margin-top: -40px;
             display: flex;
             justify-content: center;
@@ -130,12 +124,16 @@
             margin-left: -40%;
         }
 
+        #radio4:checked ~ .first{
+            margin-left: -60%;
+        }
+
         /* css for automatic navigation */
         
         .navigation-auto{
             position: absolute;
             display: flex;
-            width: 360px;
+            width: 640px;
             justify-content: center;
             margin-top: 320px;
         }
@@ -162,22 +160,38 @@
         #radio3:checked ~ .navigation-auto .auto-btn3{
             background: black ;
         }
+
+        #radio4:checked ~ .navigation-auto .auto-btn4{
+            background: black ;
+        }
+        input{
+            width: 100%;
+            font-weight: 400;
+            padding: 8px 10px;
+            border-radius: 5px;
+            border: 1.2px solid #7a0041;
+            margin-top: 5px;
+        }
     </style>
 </head>
-<body style="background-color: aliceblue;">
+<body>
+    <!--Navigation Bar start-->
     <header>
         <div class="container">
         <a href="index.html"><img src="Images/HLC Name.png" alt="logo" class="logo" width="218.4px" height="98.4px"></a>
         <nav>
+            <!--Links to pages start-->
             <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Order Now</a></li>
+            <li><a href="Location.html">Locate Us</a></li>
+            <li><a href="Contact Us.html">Contact Us</a></li>
+            <li><a href="Order Now.html">Order Now</a></li>
             </ul>
+            <!--Links to pages end-->
         </nav>
         </div>
     </header>
+    <!--Navigation Bar end-->
     <!--Image Slider start-->
     <div class="forslider">
         <div class="slider">
@@ -186,16 +200,20 @@
                 <input type="radio" name="radio-btn" id="radio1">
                 <input type="radio" name="radio-btn" id="radio2">
                 <input type="radio" name="radio-btn" id="radio3">
+                <input type="radio" name="radio-btn" id="radio4">
                 <!--Radio Buttons end-->
                 <!--Slide Images start-->
                 <div class="slide first">
-                    <img src="Images/4 Aug 2021 - IG Feed - midweek post.jpg" alt="pic"> <!--These are pictures from my church (Temporary! Will change.)-->
+                    <img src="Images/Scroller 1.jpg" alt="pic"> <!--These are pictures from my church (Temporary! Will change.)-->
                 </div>
                 <div class="slide">
-                    <img src="Images/28 October Midweek Post.png" alt="pic1">
+                    <img src="Images/Scroller 2.jpg" alt="pic1">
                 </div>
                 <div class="slide">
-                    <img src="Images/midweek post nov 17.jpg" alt="pic2">
+                    <img src="Images/Scroller 3.jpg" alt="pic2">
+                </div>
+                <div class="slide">
+                    <img src="Images/Scroller 4.jpg" alt="pic3">
                 </div>
                 <!--Slide Images end-->
                 <!--Automatic Navigation start-->
@@ -203,6 +221,7 @@
                     <div class="auto-btn1"></div>
                     <div class="auto-btn2"></div>
                     <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
                 </div>
                 <!--Automatic Navigation end-->
             </div>
@@ -211,6 +230,7 @@
                 <label for="radio1" class="manual-btn"></label>
                 <label for="radio2" class="manual-btn"></label>
                 <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
             </div>
             <!--Manual Navigation end-->
         </div>
@@ -225,9 +245,9 @@
             Mollitia aliquid quibusdam magnam ipsam, repellendus modi tempore cum.
         </p>
     </div>
-    <p></p>
+    <p class="padding"></p>
     <hr>
-    <p></p>
+    <p class="padding"></p>
     <div class="content">
         <img src="Images/Tealeaves.jpg" alt="tea leaves" width="250px" height="250px">
         <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -235,9 +255,9 @@
             voluptatibus et nihil qui voluptatem nobis eaque!
         </p>
     </div>
-    <p></p>
+    <p class="padding"></p>
     <hr>
-    <p></p>
+    <p class="padding"></p>
     <div class="content">
         <img src="Images/filler pic.png" alt="logo">
         <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
@@ -245,23 +265,22 @@
             voluptatibus et nihil qui voluptatem nobis eaque!
         </p>
     </div>
-    <p></p>
-    <hr width="100px">
-    <p></p>
+    <p class="padding"></p>
     <!--About Us end-->
+    <!--Newsletter start-->
     <div class="mail">
         <h1>Join the HLC newsletter!</h1>
         <p>Be the first to know about our discounts and promotions!</p>
+        <!--Submit Email start-->
         <form class="inputemail">
             <span class="material-icons md-light">&#xe158;</span> 
-            <label for="email" style="display: inline-block; font-weight: bold;">Email Address:</label>
-            <input type="email" placeholder="Enter your e-mail">
-            <input type="button" value="Submit">
+            <label for="newsletter-email">Email Address</label>
+            <input type="email" id="newsletter-email" placeholder="Enter your e-mail">
+            <div>
+                <input type="button" value="Submit" class="submit-button">
+            </div>
         </form>
+        <!--Submit Email end-->
     </div>
+    <!--Newletter end-->
     <a href="#" class="gotop"><span class="material-icons">&#xe5d8;</span></a>
-
-        
-<!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.2072803811723!2d103.84584656015302!3d1.2758858998221472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da193617c3e2f3%3A0xeef59e337c586f75!2sHey%20Long%20Cha%20%40%20International%20Plaza!5e0!3m2!1sen!2ssg!4v1637846325309!5m2!1sen!2ssg" 
-        width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe> -->
