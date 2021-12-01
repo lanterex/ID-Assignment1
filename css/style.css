@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-	width: 80%;
+	width: 85%;
 	margin: 0 auto; 
 }
 
@@ -40,7 +40,9 @@ nav {
 nav ul {
     margin: 0;
     padding: 0;
+    width: 100%;
     list-style: none;
+    flex-wrap: nowrap;
 }
 
 nav li {
@@ -79,11 +81,8 @@ nav a:hover::before {
 }
 
 .submit-button{
-    border: none;
+    border-color: #7a0041;
     cursor: pointer;
-}
-.submit-button:focus{
-    border: black;
 }
 
 .mail{
@@ -98,18 +97,19 @@ nav a:hover::before {
         #bde0ff               
             );   
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .inputemail{
-    width: 50%;
     position: relative;
-    min-width: 500px;
     padding: 50px;
     background-color: aliceblue;
     border-radius: 10px;
     display: flex;
+    flex-wrap: wrap;
     grid-gap: 20px 30px;
     margin-bottom: 20px;
 }
@@ -130,3 +130,4 @@ nav a:hover::before {
     font-size: 22px;
     border-radius: 30px;
 }
+
