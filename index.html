@@ -10,7 +10,6 @@
     <link rel="icon" href="Images/hlc logo.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-    <script src="script.js"></script>
     <title>ID Assignment</title>
     <style>
         .header{
@@ -46,11 +45,22 @@
             padding: 5px;
         }
 
+        div.content p{
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .about-us{
+            text-align: center;
+            font-size: 53px; 
+        }
+
         /* css for slider */
         .forslider{
             margin: 0;
             padding: 0;
-            height: 80vh;
+            height: 100%;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -64,33 +74,35 @@
             );   
         }
         .slider{
-            width: 640px;
-            height: 360px;
+            aspect-ratio: 16 / 9;
+            height: 50em;
             border-radius: 10px;
             overflow: hidden;
+
         }
         .slides{
             width: 500%;
-            height: 360px;
             display: flex;
         }
         .slides input{
             display: none;
         }
+
         .slide{
             width: 20%;
             transition: 1.6s;
         }
+
         .slide img{
-            width: 640px;
-            height: 360px;
+            aspect-ratio: 16 / 9;
+            height: 50em;
         }
 
         /* css for manual slide navigation */
         
         .navigation-manual{
             position: absolute;
-            width: 640px;
+            width: 1400px;
             margin-top: -40px;
             display: flex;
             justify-content: center;
@@ -133,9 +145,9 @@
         .navigation-auto{
             position: absolute;
             display: flex;
-            width: 640px;
+            width: 1400px;
             justify-content: center;
-            margin-top: 320px;
+            margin-top: 767px;
         }
 
         .navigation-auto div{
@@ -172,6 +184,152 @@
             border: 1.2px solid #7a0041;
             margin-top: 5px;
         }
+
+        @media (max-width: 1440px) {
+            .slider{
+                height: 26em;
+            }
+
+            .slides img{
+                height: 26em;
+            }
+
+            .navigation-manual{
+            position: absolute;
+            width: 740px;
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+            }
+
+            .navigation-auto{
+            position: absolute;
+            display: flex;
+            width: 740px;
+            justify-content: center;
+            margin-top: 382.5px;
+            }
+
+            .navigation-auto div{
+            border: 2px solid black ;
+            padding: 5px;
+            border-radius: 10px;
+            transition: 1s;
+            }
+
+            div.content p{
+            text-align: center;
+            font-size: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .slider{
+                height: 18em;
+            }
+
+            .slides img{
+                height: 18em;
+            }
+
+            .navigation-manual{
+            position: absolute;
+            width: 525px;
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+            }
+
+            .navigation-auto{
+            position: absolute;
+            display: flex;
+            width: 525px;
+            justify-content: center;
+            margin-top: 255px;
+            }
+
+            div.content p{
+            text-align: center;
+            font-size: 14px;
+            }
+
+            .about-us{
+                text-align: center;
+                font-size: 45px; 
+            }
+        }
+
+        @media (max-width: 560px) {
+            .slider{
+                height: 12em;
+            }
+
+            .slides img{
+                height: 12em;
+            }
+
+            .navigation-manual{
+            position: absolute;
+            width: 350px;
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+            }
+
+            .navigation-auto{
+            position: absolute;
+            display: flex;
+            width: 350px;
+            justify-content: center;
+            margin-top: 159px;
+            }
+
+            div.content p{
+            text-align: center;
+            font-size: 12px;
+            }
+
+            .about-us{
+                text-align: center;
+                font-size: 38px; 
+            }
+        }
+
+        @media (max-width: 375px) {
+            .slider{
+                height: 9em;
+            }
+
+            .slides img{
+                height: 9em;
+            }
+
+            .navigation-manual{
+            position: absolute;
+            width: 260px;
+            margin-top: -40px;
+            display: flex;
+            justify-content: center;
+            }
+
+            .navigation-auto{
+            position: absolute;
+            display: flex;
+            width: 260px;
+            justify-content: center;
+            margin-top: 111px;
+            }
+
+            div.content p{
+            text-align: center;
+            font-size: 10px;
+            }
+
+            .about-us{
+                text-align: center;
+                font-size: 30px; 
+            }
+        }
     </style>
 </head>
 <body>
@@ -185,7 +343,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="Location.html">Locate Us</a></li>
             <li><a href="Contact Us.html">Contact Us</a></li>
-            <li><a href="Order Now.html">Order Now</a></li>
+            <li><a href="Our Menu.html">Our Menu</a></li>
             </ul>
             <!--Links to pages end-->
         </nav>
@@ -204,7 +362,7 @@
                 <!--Radio Buttons end-->
                 <!--Slide Images start-->
                 <div class="slide first">
-                    <img src="Images/Scroller 1.jpg" alt="pic"> <!--These are pictures from my church (Temporary! Will change.)-->
+                    <img src="Images/Scroller 1.jpg" alt="pic">
                 </div>
                 <div class="slide">
                     <img src="Images/Scroller 2.jpg" alt="pic1">
@@ -237,10 +395,10 @@
     </div>
     <!--Image Slider end-->
     <!--About Us Start-->
-    <p style="font-size: 53px; text-align: center;"><u>About Us</u></p>
+    <p class="about-us"><u>About Us</u></p>
     <div class="content">
-        <img src="Images/heart.jpg" alt="heart-image" width="292px" height="200px">
-        <p style="text-align: center;">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+        <img src="Images/About Us 1.jpg" alt="Strawberry Milk" width="285px" height="160.3125px">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
             Placeat quo corrupti accusantium ducimus, dicta voluptatum totam nobis odit fugit obcaecati officiis.
             Mollitia aliquid quibusdam magnam ipsam, repellendus modi tempore cum.
         </p>
@@ -249,8 +407,8 @@
     <hr>
     <p class="padding"></p>
     <div class="content">
-        <img src="Images/Tealeaves.jpg" alt="tea leaves" width="250px" height="250px">
-        <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        <img src="Images/About Us 2.jpg" alt="Oolong Milk" width="285px" height="160.3125px">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Consequuntur perferendis, eligendi voluptate dolor ad animi laboriosam officiis est, 
             voluptatibus et nihil qui voluptatem nobis eaque!
         </p>
@@ -259,8 +417,8 @@
     <hr>
     <p class="padding"></p>
     <div class="content">
-        <img src="Images/filler pic.png" alt="logo">
-        <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        <img src="Images/About Us 3.jpg" alt="Fresh Lemon Yakult" width="285px" height="160.3125px">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             Consequuntur perferendis, eligendi voluptate dolor ad animi laboriosam officiis est, 
             voluptatibus et nihil qui voluptatem nobis eaque!
         </p>
@@ -268,19 +426,19 @@
     <p class="padding"></p>
     <!--About Us end-->
     <!--Newsletter start-->
-    <div class="mail">
-        <h1>Join the HLC newsletter!</h1>
-        <p>Be the first to know about our discounts and promotions!</p>
+    <!-- <div class="mail"> -->
+        <!-- <h1>Join the HLC newsletter!</h1>
+        <p>Be the first to know about our discounts and promotions!</p> -->
         <!--Submit Email start-->
-        <form class="inputemail">
+        <!-- <form class="inputemail">
             <span class="material-icons md-light">&#xe158;</span> 
             <label for="newsletter-email">Email Address</label>
             <input type="email" id="newsletter-email" placeholder="Enter your e-mail">
             <div>
                 <input type="button" value="Submit" class="submit-button">
             </div>
-        </form>
+        </form> -->
         <!--Submit Email end-->
-    </div>
+    <!-- </div> -->
     <!--Newletter end-->
     <a href="#" class="gotop"><span class="material-icons">&#xe5d8;</span></a>
