@@ -9,28 +9,32 @@
     <meta name="viewport" content="width=device-width, inital-scale=1.0">
     <link rel="icon" href="Images/hlc logo.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>ID Assignment</title>
     <style>
-        .form-container{
+        body {
+            justify-content: center;
+        }
+
+        .form-container {
             background-color: #ffffff;
             width: 70%;
             position: relative;
-            min-width: 420px;
             padding: 50px;
             margin-top: 100px;
             margin-bottom: 50px;
-            left: 12.5%;
+            /* left: 12.5%; */
             border-radius: 10px;
-            box-shadow: 0 0 10px 5px rgba(0,0,0,.15);
+            box-shadow: 0 0 10px 5px rgba(0, 0, 0, .15);
         }
-        h1{
+
+        h1 {
             font-size: 30px;
             text-align: center;
             color: rgba(14, 1, 1, 0.707);
         }
-        p{
+
+        p {
             position: relative;
             margin: auto;
             width: 100%;
@@ -39,25 +43,28 @@
             font-size: 14px;
             font-weight: 400;
         }
-        form{
+
+        form {
             width: 100%;
             position: relative;
             margin: 30px auto 0 auto;
         }
-        .form-row{
+
+        .form-row {
             width: 100%;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
             grid-gap: 20px 30px;
             margin-bottom: 20px;
         }
 
-        label{
+        label {
             color: #00417a;
             font-size: 14px;
         }
+
         textarea,
-        input{
+        input {
             width: 100%;
             font-weight: 400;
             padding: 8px 10px;
@@ -65,78 +72,98 @@
             border: 1.2px solid #7a0041;
             margin-top: 5px;
         }
-        textarea{
+
+        textarea {
             resize: none;
         }
+
         textarea:focus,
-        input:focus{
+        input:focus {
             outline: none;
             border-color: green;
         }
-        button{
+
+        button {
             border: none;
             padding: 10px 20px;
-            background: linear-gradient(
-                135deg,
-                #bde0ff,
-                #d7ecff,
-                aliceblue,
-                #d7ecff,
-                #bde0ff               
-            );
+            background: aliceblue;
             border-radius: 3px;
             color: black;
             cursor: pointer;
         }
 
+        #form-placeholder {
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: nowrap;
+            align-content: space-around;
+        }
+
+        @media screen and (max-width: 330px) {
+            .form-row {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-content: flex-start;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+        }
     </style>
 </head>
+
 <body>
     <!--Navigation Bar start-->
     <header>
         <div class="container">
-        <a href="index.html"><img src="Images/HLC Name.png" alt="logo" class="logo" width="218.4px" height="98.4px"></a>
-        <nav>
-            <!--Links to pages start-->
-            <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Location.html">Locate Us</a></li>
-            <li><a href="Contact Us.html">Contact Us</a></li>
-            <li><a href="#">Order Now</a></li>
-            </ul>
-            <!--Links to pages end-->
-        </nav>
+            <a href="index.html"><img src="Images/HLC Name.png" alt="logo" class="logo" width="218.4px"
+                    height="98.4px"></a>
+            <nav>
+                <!--Links to pages start-->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Location.html">Locate Us</a></li>
+                    <li><a href="Contact Us.html">Contact Us</a></li>
+                    <li><a href="Our Menu.html">Our Menu</a></li>
+                </ul>
+                <!--Links to pages end-->
+            </nav>
         </div>
     </header>
     <!--Navigation Bar end-->
-    <div class="form-container">
-        <h1>Get in touch with our Team</h1>
-        <p>Leave us a review or a message</p>
-        <form>
-            <div class="form-row">
-                <div class="form-column">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Your name">
+    <div id="form-placeholder">
+        <div class="form-container">
+            <h1>Get in touch with our Team</h1>
+            <p>Leave us a review or a message</p>
+            <form>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your name">
+                    </div>
+                    <div class="form-column">
+                        <label for="number">Phone Number</label>
+                        <input type="tel" id="number" placeholder="Your contact number">
+                    </div>
                 </div>
-                <div class="form-column">
-                    <label for="number">Phone Number</label>
-                    <input type="tel" id="number" placeholder="Your contact number">
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="form-email">Email</label>
+                        <input type="email" id="form-email" placeholder="Your email">
+                    </div>
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="form-column">
-                    <label for="form-email">Email</label>
-                    <input type="email" id="form-email" placeholder="Your email">
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="message">Your message</label>
+                        <textarea id="message" placeholder="Your message" rows="5" cols="30px"></textarea>
+                    </div>
                 </div>
-            </div>
-            <div class="form-row">
-                <div class="form-column">
-                    <label for="message">Your message</label>
-                    <textarea id="message" placeholder="Your message" rows="5" cols="30px"></textarea>
-                </div>
-            </div>
-            <button type="button">Submit</button>
-        </form>
+                <button type="button">Submit</button>
+            </form>
+        </div>
     </div>
     <a href="#" class="gotop"><span class="material-icons">&#xe5d8;</span></a>
 </body>
