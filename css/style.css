@@ -179,9 +179,9 @@ nav a:hover::before {
     }
 }
 
-/*******
- * Location body
-  ****** */
+/***************************
+*       Location-Body
+ ***************************/
 #location-body {
     display: flex;
     flex-direction: column;
