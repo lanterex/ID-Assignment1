@@ -10,17 +10,53 @@
     <link rel="icon" href="Images/hlc logo.png">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
-    
     <title>ID Assignment</title>
     <style>
-        input{
-            width: 100%;
-            font-weight: 400;
-            padding: 8px 10px;
-            border-radius: 5px;
-            border: 1.2px solid #7a0041;
-            margin-top: 5px;
+        .drink-container{
+            display: flex;
+            flex-direction: row;
+            padding: 2%;
+            margin: 3%;
+            width: 90%;
+            background-color: none;
+            align-items: center;
         }
+        .drink-content{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            align-items: center;
+        }
+        .drink{
+            width: 50%;
+            height: 50%;
+        }
+        .menu-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        .menu-content{
+            width: 50%;
+            padding: 2%;
+            align-items: center;
+        }
+
+        .menu{
+            width: 80%;
+            height: 100%;
+        }
+
+        .menu-right{
+            width: 80%;
+            height: 100%;
+            float: right;
+        }
+
+        h4{
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -34,14 +70,53 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="Location.html">Locate Us</a></li>
             <li><a href="Contact Us.html">Contact Us</a></li>
-            <li><a href="Order Now.html">Order Now</a></li>
+            <li><a href="Our Menu.html">Our Menu</a></li>
             </ul>
             <!--Links to pages end-->
         </nav>
         </div>
     </header>
     <!--Navigation Bar end-->
-    
+    <!--Drink Info start-->
+    <div class="drink-container">
+        <div class="drink-content">
+            <img src="Images/Fresh Lemon Yakult PNG.png" alt="Fresh Lemon Yakult" class="drink">
+            <div class="  ">
+                <h4>Earl Grey Milk Tea</h4>
+            </div>
+        </div>
+        <div class="drink-content">
+            <img src="Images/Boba Brown Sugar Milk Tea PNG.png" alt="Boba Brown Sugar Milk Tea" class="drink">
+            <div class="drink-info">
+                <h4>Earl Grey Milk Tea</h4>
+            </div>
+        </div>
+        <div class="drink-content">
+            <img src="Images/Strawberry Milk PNG.png" alt="Strawberry Milk" class="drink">
+            <div class="drink-info">
+                <h4>Earl Grey Milk Tea</h4>
+            </div>
+        </div>
+    </div>
+    <!--Drink Info end-->
+    <!--Menu Content start-->
+    <div class="menu-container">
+        <div class="menu-content">
+            <img src="Images/Menu1.jpg" alt="Menu 1" class="menu-right">
+        </div>
+        <div class="menu-content">
+            <img src="Images/Menu2.jpg" alt="Menu 2" class="menu">
+        </div>
+    </div>
+    <div class="menu-container">
+        <div class="menu-content">
+            <img src="Images/Menu3.jpg" alt="Menu 3" class="menu-right">
+        </div>
+        <div class="menu-content">
+            <img src="Images/Menu4.jpg" alt="Menu 4" class="menu">
+        </div>
+    </div>
+    <!--Menu Content end-->
     <!--Newsletter start-->
     <div class="mail">
         <h1>Join the HLC newsletter!</h1>
