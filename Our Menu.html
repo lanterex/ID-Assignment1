@@ -26,10 +26,30 @@
             flex-direction: column;
             height: 100%;
             align-items: center;
+            border-radius: 10px;  
         }
         .drink{
             width: 50%;
             height: 50%;
+        }
+        .drink-info{
+            width: 20rem;
+            height: 14rem;
+            padding: 2%;
+            background: white;
+            max-width: 252px;           /* PLEASE REMEMBER U DID THIS ETHAN U DUMB */
+            box-shadow: 0 0 10px 5px rgba(0,0,0,.15);
+            border-radius: 10px;
+        }
+        .title{
+            font-size: 32px;
+        }
+        .drink-info > p{
+            text-align: center;
+        }
+
+        .drink-info > p:last-child{
+            font-size: 20px;
         }
         .menu-container{
             display: flex;
@@ -53,48 +73,80 @@
             float: right;
         }
 
-        h4{
-            text-align: center;
+        @media (max-width: 1000px){
+            .drink-container{
+                padding: 2%;
+                display: flex;
+                flex-direction: column;
+            }
         }
 
+        @media (max-width: 768px){
+            .menu-container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .menu-content{
+                width: 80%;
+            }
+        }
+        @media (max-width: 320px){
+            .menu-content{
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <!--Navigation Bar start-->
     <header>
-        <div class="container">
-        <a href="index.html"><img src="Images/HLC Name.png" alt="logo" class="logo" width="218.4px" height="98.4px"></a>
-        <nav>
-            <!--Links to pages start-->
-            <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="Location.html">Locate Us</a></li>
-            <li><a href="Contact Us.html">Contact Us</a></li>
-            <li><a href="Our Menu.html">Our Menu</a></li>
+        <nav class="navbar">
+            <a href="index.html"><img src="Images/HLC Name.png" alt="logo" class="logo" width="218.4px" height="98.4px"></a>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Location.html" class="nav-link">Locate Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Contact Us.html" class="nav-link">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Our Menu.html" class="nav-link">Our Menu</a>
+                </li>
             </ul>
-            <!--Links to pages end-->
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </nav>
-        </div>
     </header>
     <!--Navigation Bar end-->
     <!--Drink Info start-->
     <div class="drink-container">
         <div class="drink-content">
             <img src="Images/Fresh Lemon Yakult PNG.png" alt="Fresh Lemon Yakult" class="drink">
-            <div class="  ">
-                <h4>Earl Grey Milk Tea</h4>
+            <div class="drink-info">
+                <p class="title">Fresh Lemon Yakult</p>
+                <p>Sweet, sour and tangy!</p>
             </div>
         </div>
         <div class="drink-content">
             <img src="Images/Boba Brown Sugar Milk Tea PNG.png" alt="Boba Brown Sugar Milk Tea" class="drink">
             <div class="drink-info">
-                <h4>Earl Grey Milk Tea</h4>
+                <p class="title">Boba Brown Sugar Milk Tea</p>
+                <p>Mesmerizing patterns. Fall in love at first sight.</p>
             </div>
         </div>
         <div class="drink-content">
-            <img src="Images/Strawberry Milk PNG.png" alt="Strawberry Milk" class="drink">
+            <img src="Images/Peach Alishan Tea PNG.png" alt="Peach Alishan Tea" class="drink">
             <div class="drink-info">
-                <h4>Earl Grey Milk Tea</h4>
+                <p class="title">Peach Alishan Tea</p>
+                <p>Refreshing and rejuvinating!</p>
             </div>
         </div>
     </div>
