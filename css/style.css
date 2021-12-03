@@ -49,7 +49,7 @@ nav li {
     flex-wrap: wrap;
     display: inline-block;
     margin-left: 110px;
-    padding-top: 44px;
+    padding: auto 0;
     position: relative;
 }
 
